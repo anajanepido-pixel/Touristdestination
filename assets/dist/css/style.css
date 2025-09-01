@@ -1,0 +1,11 @@
+.container {
+  background-color: lightblue;
+  margin: auto;
+  border-collapse: collapse;
+}
+footer {
+  background-color: #777;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
