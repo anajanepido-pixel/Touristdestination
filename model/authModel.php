@@ -7,7 +7,7 @@ class authModel extends Connector
 {
     function __construct()
     {
-        parent::__construct();
+        parent:: __construct();
     }
     #------ login credential
     function getUsername($username)
@@ -21,3 +21,4 @@ class authModel extends Connector
         return $stmt->fetchall(PDO::FETCH_ASSOC); // returns ['username' => ..., 'password' => ...] or false
     }
 }
+?>

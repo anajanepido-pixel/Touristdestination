@@ -1,7 +1,7 @@
 <?php
 
 //model
-include '../model/contactModel.php';
+include '../model/homeModel.php';
 
 //global variable
 $page['page'] = 'Contact';
@@ -23,7 +23,7 @@ class Contact
     //encapsulation
     private $page = '';
     private $subpage = '';
-    protected $contactModel = '';
+    protected $homeModel = '';
 
     //constructor
     function __construct($page)
@@ -31,7 +31,7 @@ class Contact
         $this->page = $page['page']; //assigned the property value
         $this->subpage = $page['subpage']; //assigned the property value
 
-        $this->contactModel = new contactModel(); //instance/object
+        $this->homeModel = new homeModel(); //instance/object
 
         //run the method/behaviour
         $this->{$page['subpage']}();
@@ -40,7 +40,7 @@ class Contact
     function contact()
     {
 
-        include '../page/contact.php';
+        include '../views/contact.php';
     }
 }
 
@@ -49,7 +49,7 @@ class ActiveContact
 
     private $page = '';
     private $subpage = '';
-    protected $contactModel = '';
+    protected $homeModel = '';
 
     //constructor
     function __construct($page)
@@ -57,7 +57,7 @@ class ActiveContact
         $this->page = $page['page']; //assigned the property value
         $this->subpage = $page['subpage']; //assigned the property value
 
-        $this->contactModel = new contactModel(); //instance/object
+        $this->homeModel = new homeModel(); //instance/object
 
         //run the method/behaviour
         $this->{$_GET['function']}();
@@ -65,8 +65,8 @@ class ActiveContact
 
     function sendSms()
     {
-        $sendSms = $this->contactModel->sendSms($_POST);
+        $sendSms = $this->homeModel->sendSms($_POST);
 
-        header('location: ../views/contact.php');
+        header('location: ../page/contact.php');
     }
 }

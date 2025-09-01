@@ -7,7 +7,7 @@ class adminModel extends Connector
 {
     function __construct()
     {
-        parent::__construct();
+        parent:: __construct();
     }
 
     function getNotSeenMsg()
@@ -131,3 +131,4 @@ class adminModel extends Connector
         }
     }
 }
+?>
