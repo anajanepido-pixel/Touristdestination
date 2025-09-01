@@ -65,7 +65,7 @@ class ActiveAuthenticate
 
                 $_SESSION['loggedIn_id'] = $login['username'];
                 $_SESSION['user_type']   = $login['user_type'];
-                header('Location: ../page/admin.php');
+                header('Location: ../views/dashboard.php');
                 exit;
             }
         }
